@@ -6,7 +6,7 @@
 #    By: qduperon <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/16 13:22:36 by qduperon          #+#    #+#              #
-#    Updated: 2016/08/24 17:47:21 by qduperon         ###   ########.fr        #
+#    Updated: 2016/09/19 17:11:29 by qduperon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,10 @@ NAME = wolf3d
 #                           //  SOURCES  \\                                    #
 #==============================================================================#
 
-SRCS = srcs/
+SRCS = srcs/algo.c \
+	   srcs/error.c \
+	   srcs/init.c \
+	   srcs/main.c \
 
 #==============================================================================#
 #                             //  FLAGS  \\                                    #
@@ -35,8 +38,12 @@ FLAGS = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME):
-	make -C libft \re
-	gcc -o $(NAME) $(FLAGS) $(SRCS) -I./includes -lft -L./libft
+	@echo "Begining Wolf..."
+	make -C libft/ re
+	make -C minilibx_macos/ re
+	gcc -o $(NAME) $(FLAGS) $(SRCS) -lmlx -framework OpenGL -framework AppKit \
+		-I./includes -lft -L./libft
+	@echo "Wolf Done"
 
 #==============================================================================#
 #                              // DELETING \\                                  #
@@ -47,6 +54,7 @@ clean:
 
 fclean:
 	make fclean -C libft
+	make fclean -C minilibx_macos
 	rm -f $(NAME)
 
 #==============================================================================#
