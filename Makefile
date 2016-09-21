@@ -6,7 +6,7 @@
 #    By: qduperon <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/16 13:22:36 by qduperon          #+#    #+#              #
-#    Updated: 2016/09/19 17:11:29 by qduperon         ###   ########.fr        #
+#    Updated: 2016/09/21 20:35:26 by qduperon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,15 @@ NAME = wolf3d
 #==============================================================================#
 
 SRCS = srcs/algo.c \
+	   srcs/dir.c \
+	   srcs/draw.c \
 	   srcs/error.c \
 	   srcs/init.c \
 	   srcs/main.c \
+	   srcs/move.c \
+	   srcs/plan.c \
+	   srcs/pos.c \
+	   srcs/tools_calc.c \
 
 #==============================================================================#
 #                             //  FLAGS  \\                                    #
@@ -51,10 +57,11 @@ $(NAME):
 
 clean:
 	make clean -C libft
+	make clean -C minilibx_macos
 
 fclean:
 	make fclean -C libft
-	make fclean -C minilibx_macos
+	make clean -C minilibx_macos
 	rm -f $(NAME)
 
 #==============================================================================#

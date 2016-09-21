@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/15 17:25:00 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/19 17:24:40 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/21 20:40:43 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,8 @@ t_move	*ft_init_move(void)
 	move->left = 0;
 	move->right = 0;
 	move->turn = 0;
+	move->v = 0;
+	move->t_speed = 0;
+	move->speed_up = 0;
 	return (move);
 }

@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/19 16:59:39 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/19 17:13:12 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/21 20:19:22 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_expose(t_env *e)
 	if (!(t_var *)malloc(sizeof(t_var)))
 		return (0);
 	if (e->move->B || e->move->F || e->move->L || e->move->R || \
-		   	e->move->turn || e->move->first)
+			e->move->turn || e->move->first)
 	{
 		ft_bzero(e->img->data, W * H * e->img->bpp / 8);
 		ft_move(e);
@@ -34,6 +34,10 @@ int		ft_expose(t_env *e)
 		while (v->x < H)
 		{
 			ft_init_var(v);
+			ft_vect(v);
+			ft_hit(v);
+			ft_verif(v);
+			ft_draw(e, v);
 			v->x++;
 		}
 	}
