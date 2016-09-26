@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/15 17:25:00 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/21 20:40:43 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/26 16:26:16 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ t_move	*ft_init_move(void)
 	t_move	*move;
 
 	move = NULL;
-	if (!((t_move *)malloc(sizeof(t_move *))))
-		return (NULL);
+	if (!(move = (t_move *)malloc(sizeof(t_move))))
+		return (0);
 	move->backward = 0;
 	move->first = 1;
 	move->forward = 0;

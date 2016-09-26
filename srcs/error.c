@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/06 18:03:55 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/15 16:57:48 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/26 15:44:00 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,26 @@
 
 void	ft_parse_error(int ac, char **av)
 {
-	av[1][0] = 0;
 	if (ac != 1)
-		ft_error();
+		ft_error(av);
+	else
+		return ;
 }
 
-void	ft_error(void)
+void	ft_error(char **av)
 {
+	int i;
+
+	i = 1;
+	ft_putstr("The program doesn't need ");
+	while (av[i])
+	{
+		ft_putstr(av[i]);
+		ft_putchar(' ');
+		i++;
+	}
+	ft_putchar('\n');
 	ft_putendl("Usage :");
 	ft_putendl("./wolf3d");
+	exit(0);
 }

@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/19 16:59:39 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/21 20:19:22 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/26 17:31:17 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_expose(t_env *e)
 	t_var	*v;
 
 	v = NULL;
-	if (!(t_var *)malloc(sizeof(t_var)))
+	if (!(v = (t_var *)malloc(sizeof(t_var))))
 		return (0);
 	if (e->move->B || e->move->F || e->move->L || e->move->R || \
 			e->move->turn || e->move->first)

@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/24 17:50:49 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/21 20:47:31 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/26 20:06:45 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@
 
 typedef struct		s_position
 {
-	int				x;
-	int				y;
+	double			x;
+	double			y;
 }					t_pos;
 
 typedef struct		s_variable
@@ -110,7 +110,12 @@ void				ft_draw(t_env *e, t_var *v);
 ** error.c
 */
 void				ft_parse_error(int ac, char **av);
-void				ft_error(void);
+void				ft_error(char **av);
+/*
+** hook.c
+*/
+int					ft_key_hook(int keycode, t_env *e);
+int					ft_key_hook2(int keycode, t_env *e);
 /*
 ** init.c
 */
@@ -143,6 +148,10 @@ double				ft_posy(void);
 t_pos				*ft_pos(void);
 void				set_posx(double x);
 void				set_posy(double y);
+/*
+** tools.c
+*/
+void				ft_display(t_env env);
 /*
 ** tools_calc.c
 */

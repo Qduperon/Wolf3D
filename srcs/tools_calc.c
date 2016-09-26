@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 19:53:50 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/21 20:49:42 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/26 17:18:03 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_vect(t_var *v)
 	else
 	{
 		v->step.x = 1;
-		v->sidedis.x = (v->map.x + 1 - v->raypos.x) * v->delta.x;
+		v->sidedis.x = (v->map.x + 1.0 - v->raypos.x) * v->delta.x;
 	}
 	if (v->raydir.y < 0)
 	{
@@ -33,7 +33,7 @@ void	ft_vect(t_var *v)
 	else
 	{
 		v->step.y = 1;
-		v->sidedis.y = (v->map.y + 1 - v->raypos.y) * v->delta.y;
+		v->sidedis.y = (v->map.y + 1.0 - v->raypos.y) * v->delta.y;
 	}
 }
 
@@ -61,9 +61,11 @@ void	ft_hit(t_var *v)
 void	ft_verif(t_var *v)
 {
 	if (v->side == 0)
-		v->P = ABS((v->map.x - v->raypos.x + (1 - v->step.x) / 2) / v->raydir.x);
+		v->P = ABS((v->map.x - v->raypos.x + \
+					(1 - v->step.x) / 2) / v->raydir.x);
 	else
-		v->P = ABS((v->map.y - v->raypos.y + (1 - v->step.y) / 2) / v->raydir.y);
+		v->P = ABS((v->map.y - v->raypos.y + \
+					(1 - v->step.y) / 2) / v->raydir.y);
 	v->hauteur_c = ABS((int)(W / v->P));
 	v->draw_s = (int)(-v->hauteur_c / 2 + W / 2);
 	v->draw_e = (int)(v->hauteur_c / 2 + W / 2);

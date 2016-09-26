@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/20 16:37:40 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/21 19:09:12 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/26 17:27:07 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 t_pos		*ft_pos(void)
 {
-	static t_pos	pos;
+	static t_pos	pos = {22, 11.5};
 
-	pos.x = 22;
-	pos.y = 11;
 	return (&pos);
 }
 
