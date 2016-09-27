@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/24 17:50:49 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/26 20:06:45 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/27 19:34:37 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@
 # include "../minilibx_macos/mlx.h"
 # include <math.h>
 
-# define W			720
-# define H			720
+# define W			1000
+# define H			1000
 
+# define A			0
+# define D			2
 # define ECHAP		53
 # define UP			126
 # define DOWN		125
@@ -151,6 +153,7 @@ void				set_posy(double y);
 /*
 ** tools.c
 */
+int					ft_exit_cross(int keycode, t_env *e);
 void				ft_display(t_env env);
 /*
 ** tools_calc.c
