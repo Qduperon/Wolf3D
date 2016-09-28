@@ -6,7 +6,7 @@
 #    By: qduperon <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/16 13:22:36 by qduperon          #+#    #+#              #
-#    Updated: 2016/09/26 20:07:12 by qduperon         ###   ########.fr        #
+#    Updated: 2016/09/28 19:46:05 by qduperon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,10 +29,12 @@ SRCS = srcs/algo.c \
 	   srcs/main.c \
 	   srcs/maps.c \
 	   srcs/move.c \
+	   srcs/music.c \
 	   srcs/plan.c \
 	   srcs/pos.c \
 	   srcs/tools.c \
 	   srcs/tools_calc.c \
+	   srcs/tools_hook.c \
 
 #==============================================================================#
 #                             //  FLAGS  \\                                    #

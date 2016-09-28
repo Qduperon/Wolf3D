@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/24 17:50:49 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/27 19:34:37 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/28 19:52:20 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@
 # define LEFT		123
 # define SPACE		49
 # define MENU		36
+# define SPEED_UP	69
+# define SPEED_DOWN 78
+# define NORMAL_SPE 67
 
 # define MAP		ft_map
 # define ABS(x) 	(x < 0) ? -x : x
@@ -84,6 +87,7 @@ typedef struct		s_move
 typedef struct		s_env
 {
 	int				display;
+	int				music;
 	void			*mlx;
 	void			*win;
 	t_img			*img;
@@ -135,6 +139,11 @@ void				ft_move(t_env *e);
 void				ft_side_step(t_env *e, float spe);
 void				ft_turn(t_env *e);
 /*
+** music.c
+*/
+void				ft_music(t_env *env);
+void				ft_music2(t_env *env);
+/*
 ** plan.c
 */
 double				ft_planx(void);
@@ -155,11 +164,17 @@ void				set_posy(double y);
 */
 int					ft_exit_cross(int keycode, t_env *e);
 void				ft_display(t_env env);
+void				ft_exit(void);
 /*
 ** tools_calc.c
 */
 void				ft_hit(t_var *v);
 void				ft_vect(t_var *v);
 void				ft_verif(t_var *v);
+/*
+** tools_hook.c
+*/
+int					ft_move_hook(int keycode, t_move *move);
+int					ft_speed_hook(int keycode, t_move *move);
 
 #endif
