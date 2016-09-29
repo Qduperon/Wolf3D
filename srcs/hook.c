@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/28 19:38:16 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/28 19:56:58 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/29 14:33:46 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,9 @@ int		ft_key_hook(int keycode, t_env *e)
 	ft_move_hook(keycode, move);
 	if (keycode == ECHAP)
 		ft_exit();
-	if (keycode == MENU)
-		e->display = (e->display == 1) ? 0 : 1;
-	ft_speed_hook(keycode, move);
+	ft_speed_hook(keycode, move, e);
 	if (keycode == SPACE)
 		ft_music(e);
-	ft_putnbr(keycode);
-	ft_putchar('\n');
 	return (1);
 }
 

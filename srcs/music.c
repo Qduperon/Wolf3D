@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/28 18:24:59 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/28 19:37:56 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/09/29 14:40:15 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,13 @@ void	ft_music2(t_env *env)
 	{
 		system("killall afplay");
 		system("afplay musics/ff7.mp3&");
+		env->music = 5;
+		return ;
+	}
+	if (env->music == 5)
+	{
+		system("killall afplay");
+		system("afplay musics/mario.mp3&");
 		env->music = 1;
 		return ;
 	}
