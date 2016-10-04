@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/20 16:37:40 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/26 17:27:07 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:58:16 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 t_pos		*ft_pos(void)
 {

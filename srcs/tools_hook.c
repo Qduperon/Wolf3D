@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/28 19:40:00 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/29 14:43:22 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:59:37 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 int		ft_speed_hook(int keycode, t_move *move, t_env *e)
 {

@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/28 19:38:16 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/29 14:33:46 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:56:25 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 int		ft_key_hook(int keycode, t_env *e)
 {

@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/28 18:24:59 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/29 14:40:15 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:57:26 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 void	ft_music(t_env *env)
 {

@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/19 16:59:39 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/28 18:23:42 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:55:32 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 #define B backward
 #define F forward

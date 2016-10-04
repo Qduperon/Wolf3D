@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 16:17:20 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/26 15:19:56 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:57:04 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 int		ft_map(int x, int y)
 {

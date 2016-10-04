@@ -6,7 +6,7 @@
 #    By: qduperon <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/16 13:22:36 by qduperon          #+#    #+#              #
-#    Updated: 2016/09/28 19:46:05 by qduperon         ###   ########.fr        #
+#    Updated: 2016/10/04 15:55:16 by qduperon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,12 @@ SRCS = srcs/algo.c \
 	   srcs/tools_hook.c \
 
 #==============================================================================#
+#                               // OBJECTS \\                                  #
+#==============================================================================#
+
+OBJ = $(SRCS:.c=.o)
+
+#==============================================================================#
 #                             //  FLAGS  \\                                    #
 #==============================================================================#
 
@@ -48,12 +54,12 @@ FLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(OBJ)
 	@echo "Begining Wolf..."
-	make -C libft/ re
-	make -C minilibx_macos/ re
-	gcc -o $(NAME) $(FLAGS) $(SRCS) -lmlx -framework OpenGL -framework AppKit \
-		-I./includes -lft -L./libft
+	make -C libft
+	make -C minilibx_macos
+	gcc -o $(NAME) $(FLAGS) $(OBJ) -lmlx -framework OpenGL -framework AppKit \
+		-I./includes -lft -L./libft -I./minilibx_macos
 	@echo "Wolf Done"
 
 #==============================================================================#
@@ -63,10 +69,10 @@ $(NAME):
 clean:
 	make clean -C libft
 	make clean -C minilibx_macos
+	rm -f $(OBJ)
 
-fclean:
+fclean: clean
 	make fclean -C libft
-	make clean -C minilibx_macos
 	rm -f $(NAME)
 
 #==============================================================================#

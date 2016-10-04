@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/15 17:25:00 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/26 16:26:16 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:56:39 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 #define X delta.x
 #define Y delta.y

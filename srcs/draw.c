@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 20:20:12 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/28 18:23:26 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:55:45 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 void	mlx_pixel_to_image(t_img *img, int x, int y, int color)
 {

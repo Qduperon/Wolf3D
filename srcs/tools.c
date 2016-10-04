@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 16:53:09 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/29 14:27:08 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:58:59 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 void		ft_exit(void)
 {

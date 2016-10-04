@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 19:53:50 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/26 17:18:03 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:59:20 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 #define P perpwalldis
 
 void	ft_vect(t_var *v)

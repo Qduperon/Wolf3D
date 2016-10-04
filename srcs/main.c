@@ -6,11 +6,11 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/06 17:57:31 by qduperon          #+#    #+#             */
-/*   Updated: 2016/09/29 14:26:49 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/10/04 15:56:52 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wolf3d.h"
+#include "../includes/wolf3d.h"
 
 int		main(int ac, char **av)
 {
